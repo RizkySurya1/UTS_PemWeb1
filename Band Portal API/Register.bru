@@ -1,0 +1,26 @@
+meta {
+  name: Register
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bandName": "Band Demo",
+    "email": "demo@example.com",
+    "username": "banddemo",
+    "password": "123456"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Create Portofolio
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/portfolio
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userId": 1,
+    "title": "Live at Jakarta",
+    "description": "Penampilan di acara musik kampus",
+    "type": "photo",
+    "fileName": "live-jakarta.jpg"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

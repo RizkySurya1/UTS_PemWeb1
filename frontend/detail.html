@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Band - BAND PORTAL</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">🎸 BAND PORTAL</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="detail.html">Portofolio</a></li>
+        <li id="loginBtn"><a href="login.html" class="btn btn-secondary">Login</a></li>
+        <li id="registerBtn"><a href="register.html" class="btn btn-primary">Register</a></li>
+        <li id="dashboardBtn" style="display: none;"><a href="main.html">Dashboard</a></li>
+        <li id="logoutBtn" style="display: none;">
+          <a href="#" id="logoutLink" class="btn btn-danger">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PUBLIC PORTFOLIO -->
+  <div id="publicPortfolio" class="public-portfolio">
+    <div class="band-header">
+      <div class="band-avatar">🎸</div>
+      <h1 id="publicBandName"></h1>
+      <p id="publicBandBio">Rock Your Soul, Feel The Beat</p>
+      <p id="publicNotice" style="text-align:center; opacity:0.6; margin-top:10px;"></p>
+    </div>
+
+    <!-- TENTANG BAND -->
+    <div class="section">
+      <h2 class="section-title">Tentang Band</h2>
+      <p style="opacity:0.8; line-height:1.6;">
+        Kami adalah band indie yang memainkan musik rock alternatif.
+        Terbentuk sejak 2020, kami telah tampil di berbagai event kampus dan festival musik lokal.
+      </p>
+
+      <div style="margin-top:1rem; opacity:0.85;">
+        <p><strong>Genre:</strong> Rock Alternatif</p>
+        <p><strong>Asal Kota:</strong> Jakarta</p>
+        <p><strong>Kontak Manajer:</strong> 08xx-xxxx-xxxx</p>
+        <p><strong>Instagram:</strong> @namabandkeren</p>
+      </div>
+    </div>
+
+    <!-- PORTOFOLIO -->
+    <div class="section">
+      <h2 class="section-title">Portofolio</h2>
+      <div class="portfolio-grid" id="publicPortfolioGrid">
+        <!-- Diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

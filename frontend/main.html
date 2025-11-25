@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Band - BAND PORTAL</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">🎸 BAND PORTAL</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="detail.html">Portofolio</a></li>
+        <li id="loginBtn"><a href="login.html" class="btn btn-secondary">Login</a></li>
+        <li id="registerBtn"><a href="register.html" class="btn btn-primary">Register</a></li>
+        <li id="dashboardBtn" style="display: none;"><a href="main.html">Dashboard</a></li>
+        <li id="logoutBtn" style="display: none;">
+          <a href="#" id="logoutLink" class="btn btn-danger">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="dashboard">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <h1>Dashboard <span id="bandNameDisplay"></span></h1>
+        <button id="viewPublicBtn" class="btn btn-secondary">Lihat Profil Publik</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="icon">📸</div>
+          <div class="number" id="photoCount">0</div>
+          <div class="label">Foto</div>
+        </div>
+        <div class="stat-card">
+          <div class="icon">🎵</div>
+          <div class="number" id="songCount">0</div>
+          <div class="label">Lagu</div>
+        </div>
+        <div class="stat-card">
+          <div class="icon">👁️</div>
+          <div class="number" id="viewCount">0</div>
+          <div class="label">Views</div>
+        </div>
+      </div>
+
+      <!-- Upload Section -->
+      <div class="upload-section">
+        <h2>Upload Portofolio</h2>
+        <form id="uploadForm">
+          <div class="form-group">
+            <label>Judul</label>
+            <input type="text" id="uploadTitle" required />
+          </div>
+          <div class="form-group">
+            <label>Deskripsi</label>
+            <input type="text" id="uploadDesc" required />
+          </div>
+          <div class="form-group">
+            <label>Tipe</label>
+            <select
+              id="uploadType"
+              style="
+                width: 100%;
+                padding: 1rem;
+                background: var(--dark);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                color: var(--light);
+              "
+            >
+              <option value="photo">📸 Foto</option>
+              <option value="song">🎵 Lagu</option>
+              <option value="video">🎬 Video</option>
+            </select>
+          </div>
+          <div
+            class="upload-area"
+            onclick="document.getElementById('fileInput').click()"
+          >
+            <div class="upload-icon">☁️</div>
+            <p>Klik untuk upload file</p>
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/*,audio/*,video/*"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 1rem;"
+          >
+            Upload
+          </button>
+        </form>
+      </div>
+
+      <!-- Portfolio Items -->
+      <h2 class="section-title">Portofolio Saya</h2>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Portfolio items by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
