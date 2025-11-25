@@ -67,26 +67,26 @@ Register API
 ![register](frontend/img/register.png)
 
 Login API
-![login](frontend/assets/img/login.png)
+![login](frontend/img/login.png)
 
 Create Portfolio API
-![create](frontend/assets/img/create.png)
+![create](frontend/img/create.png)
 
 Get Portfolio API
-![get](frontend/assets/img/get.png)
+![get](frontend/img/get.png)
 
 🌐 Tampilan Web
 Halaman Register
-![daftar](frontend/assets/img/daftar.png)
+![daftar](frontend/img/daftar.png)
 
 Halaman Login
-![masuk](frontend/assets/img/masuk.png)
+![masuk](frontend/img/masuk.png)
 
 Halaman Home
-![home](frontend/assets/img/home.png)
+![home](frontend/img/home.png)
 
 Halaman Dashboard
-![dashboard](frontend/assets/img/dashboard.png)
+![dashboard](frontend/img/dashboard.png)
 
 Halaman About Band
-![about](frontend/assets/img/about.png)
+![about](frontend/img/about.png)
