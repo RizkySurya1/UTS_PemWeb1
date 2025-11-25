@@ -1,17 +1,8 @@
-// =======================================
-// KONFIGURASI API
-// =======================================
 const API_BASE_URL = "http://localhost:3000/api";
 
-// =======================================
-// STATE
-// =======================================
 let currentUser = null;
 let portfolioItems = [];
 
-// =======================================
-// UTIL UMUM
-// =======================================
 function getCurrentPage() {
   const path = window.location.pathname;
   return path.split("/").pop();
@@ -36,11 +27,9 @@ function requireAuth() {
   }
 }
 
-// Pesan cantik di bawah form (login & register)
 function showMessage(text, type = "info") {
   const box = document.getElementById("messageBox");
   if (!box) {
-    // fallback kalau tidak ada messageBox di halaman
     alert(text);
     return;
   }
@@ -69,9 +58,6 @@ function showMessage(text, type = "info") {
   }, 3000);
 }
 
-// =======================================
-// NAVBAR
-// =======================================
 function updateNavbar() {
   const loginBtn = document.getElementById("loginBtn");
   const registerBtn = document.getElementById("registerBtn");
@@ -93,7 +79,6 @@ function updateNavbar() {
   }
 }
 
-// HERO button state di halaman index
 function updateHeroButtons() {
   if (getCurrentPage() !== "index.html") return;
 
@@ -122,9 +107,6 @@ function setupLogout() {
   });
 }
 
-// =======================================
-// AUTH: REGISTER & LOGIN
-// =======================================
 function initRegisterPage() {
   if (getCurrentPage() !== "register.html") return;
 
@@ -139,7 +121,6 @@ function initRegisterPage() {
     const username = document.getElementById("regUsername").value.trim();
     const password = document.getElementById("regPassword").value;
 
-    // VALIDASI FRONTEND
     if (bandName.length < 3) {
       showMessage("Nama band terlalu pendek.", "error");
       return;
@@ -195,7 +176,6 @@ function initLoginPage() {
     const emailOrUsername = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value;
 
-    // VALIDASI FRONTEND
     if (emailOrUsername.length < 3) {
       showMessage("Masukkan email atau username yang benar.", "error");
       return;
@@ -240,9 +220,6 @@ function initLoginPage() {
   });
 }
 
-// =======================================
-// PORTFOLIO API
-// =======================================
 async function fetchPortfolio(userId) {
   try {
     const res = await fetch(
@@ -305,9 +282,6 @@ async function deletePortfolioItemAPI(id) {
   return data;
 }
 
-// =======================================
-// DASHBOARD (main.html)
-// =======================================
 function updateStats() {
   const photoCountEl = document.getElementById("photoCount");
   const songCountEl = document.getElementById("songCount");
@@ -423,7 +397,6 @@ function initDashboardPage() {
   }
 }
 
-// Edit bisa dikembangkan, sekarang hanya placeholder
 function editItem(id) {
   alert("Fitur edit (PUT API) bisa kamu tambahkan nanti sebagai pengembangan.");
 }
@@ -441,9 +414,6 @@ async function deleteItem(id) {
   }
 }
 
-// =======================================
-// DETAIL / PUBLIC PORTFOLIO (detail.html)
-// =======================================
 async function initDetailPage() {
   if (getCurrentPage() !== "detail.html") return;
 
@@ -454,7 +424,6 @@ async function initDetailPage() {
 
   if (!bandNameEl || !publicGrid) return;
 
-  // Cek apakah ada ?userId= di URL
   const urlParams = new URLSearchParams(window.location.search);
   const paramId = urlParams.get("userId");
 
@@ -468,7 +437,7 @@ async function initDetailPage() {
     userIdToShow = currentUser.id;
     bandNameToShow = currentUser.bandName;
   } else {
-    userIdToShow = 1; // default userId 1
+    userIdToShow = 1; 
     bandNameToShow = "Band Demo";
   }
 
@@ -510,13 +479,10 @@ async function initDetailPage() {
     .join("");
 }
 
-// =======================================
-// INIT GLOBAL
-// =======================================
 document.addEventListener("DOMContentLoaded", () => {
   loadCurrentUser();
   updateNavbar();
-  updateHeroButtons(); // atur tombol hero di halaman utama
+  updateHeroButtons(); 
   setupLogout();
 
   initRegisterPage();
