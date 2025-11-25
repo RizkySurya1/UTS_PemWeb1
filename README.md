@@ -64,29 +64,29 @@ Backend dibuat menggunakan:
 
 🧪 Testing API (Bruno)
 Register API
-![register](frontend/assets/screenshots/register.png)
+![register](frontend/img/register.png)
 
 Login API
-![login](frontend/assets/screenshots/login.png)
+![login](frontend/assets/img/login.png)
 
 Create Portfolio API
-![create](frontend/assets/screenshots/create.png)
+![create](frontend/assets/img/create.png)
 
 Get Portfolio API
-![get](frontend/assets/screenshots/get.png)
+![get](frontend/assets/img/get.png)
 
 🌐 Tampilan Web
 Halaman Register
-![daftar](frontend/assets/screenshots/daftar.png)
+![daftar](frontend/assets/img/daftar.png)
 
 Halaman Login
-![masuk](frontend/assets/screenshots/masuk.png)
+![masuk](frontend/assets/img/masuk.png)
 
 Halaman Home
-![home](frontend/assets/screenshots/home.png)
+![home](frontend/assets/img/home.png)
 
 Halaman Dashboard
-![dashboard](frontend/assets/screenshots/dashboard.png)
+![dashboard](frontend/assets/img/dashboard.png)
 
 Halaman About Band
-![about](frontend/assets/screenshots/about.png)
+![about](frontend/assets/img/about.png)
