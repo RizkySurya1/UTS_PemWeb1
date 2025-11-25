@@ -61,33 +61,24 @@ Backend dibuat menggunakan:
 
 
 
-## 🧪 Pengujian API (Bruno)
 
-### Register
-![Register](screenshots/register.png)
+🧪 Testing API (Bruno)
+Register API
+C:\xampp\htdocs\PemWeb1\web_porto\frontend\img\register.png
 
-### Login
-![Login](screenshots/login.png)
+Login API
 
-### Create Portfolio
-![Create Portfolio](screenshots/create.png)
+Create Portfolio API
 
-### Get Portfolio
-![Get Portfolio](screenshots/get.png)
+Get Portfolio API
 
-## 🧪 Tampilan Web
+🌐 Tampilan Web
+Halaman Register
 
-### Register
-![Register](screenshots/daftar.png)
+Halaman Login
 
-### Login
-![Login](screenshots/masuk.png)
+Halaman Home
 
-### Home
-![Register](screenshots/home.png)
+Halaman Dashboard
 
-### Dashboard
-![Login](screenshots/dashboard.png)
-
-### About Band
-![Login](screenshots/about.png)
+Halaman About Band
